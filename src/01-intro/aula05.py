@@ -39,7 +39,7 @@ print(resultado, type(resultado))
 frutas = ['banana', 'maçã', 'uva', 'morango', 'abacaxi']
 print(frutas)
 print(frutas[0], frutas[1], frutas[2])
-print(frutas[10]) # IndexError: list index out of range´
+# print(frutas[10]) # IndexError: list index out of range´
 
 frutas[0] = 'banana nanica'
 frutas.append('melancia')
@@ -81,7 +81,7 @@ print(funcionario['salario'])
 print(funcionario.keys())   
 print(funcionario.values())
 
-funcionario['sakarui'] = 10000.00
+funcionario['salario'] = 10000.00
 print(funcionario)
 
 
