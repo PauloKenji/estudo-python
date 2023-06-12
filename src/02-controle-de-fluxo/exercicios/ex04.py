@@ -1,4 +1,4 @@
-""" exercicio 03 - validação de indentificador com lista de erros """
+""" exercicio 04 - validação de indentificador com lista de erros """
 
 identificador = input('Identificador: ')
 erros = []
