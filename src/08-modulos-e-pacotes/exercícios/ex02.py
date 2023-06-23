@@ -3,6 +3,22 @@
 from aluno.aluno import Aluno
 from projeto.projeto import Projeto
 from participacoes.participacoes import Participacoes
+from retangulo.retangulo import Retangulo
+from pessoa.pessoa import Pessoa
+
+# ============= Retangulo =============
+
+retangulo1 = Retangulo(10.0, 5.0)
+retangulo2 = Retangulo(10.0, 5.0)
+
+print(type(retangulo1), retangulo1.base, retangulo2.altura, retangulo2.calcular_area())
+print(type(retangulo2), retangulo1.base, retangulo2.altura, retangulo2.calcular_area())
+
+# ============= Pessoas =============
+
+
+
+# ============= Alunos, Projetos e Participações =============	
 
 aluno1 = Aluno("12345", "João", "joao@example.com")
 aluno2 = Aluno("67890", "Maria", "maria@example.com")
