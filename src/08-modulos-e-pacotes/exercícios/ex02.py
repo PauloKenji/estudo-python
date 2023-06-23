@@ -50,6 +50,19 @@ print(pessoa3.nome, pessoa3.email, pessoa3.especie)
 
 print(Pessoa.especie)
 
+pessoa1 = Pessoa('111', 'joão')
+pessoa2 = Pessoa('111', 'joão')
+pessoa3 = Pessoa('222', 'maria')
+
+pessoas = {pessoa1, pessoa2, pessoa3}
+print(pessoas)
+print(pessoa1 == pessoa2)
+
+pessoas_lista = [pessoa1, pessoa2, pessoa3]
+print(pessoas_lista)
+
+print(pessoas_lista.count(pessoa1))
+
 # ============= Alunos, Projetos e Participações =============	
 
 aluno1 = Aluno("12345", "João", "joao@example.com")

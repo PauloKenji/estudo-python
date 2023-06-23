@@ -1,7 +1,17 @@
+""" Pessoa """
+
 class Pessoa:
-
-    especie = 'Humana'
-
-    def __init__(self, nome, email):
+    def __init__(self, cpf, nome):
+        self.cpf = cpf
         self.nome = nome
-        self.email = email
+
+    def __eq__(self, value):
+        if isinstance(value, self.__class__):
+            return self.cpf == value.cpf
+        return False
+    
+    def __hash__(self):
+        return hash(self.cpf)
+    
+    def __repr__(self):
+        return f'Pessoa({self.cpf}, {self.nome})'
