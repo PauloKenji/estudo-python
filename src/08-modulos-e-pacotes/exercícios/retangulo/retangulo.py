@@ -37,3 +37,9 @@ class Retangulo:
 
     def calcular_perimetro(self):
         return 2 * (self.base + self.altura)
+    
+    def __str__(self):
+        return f'Retangulo[base={self.base},altura={self.altura}]'
+    
+    def __repr__(self):
+        return f'Retangulo({self.base}, {self.altura})'

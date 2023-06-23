@@ -20,6 +20,17 @@ print(type(retangulo3), retangulo3.base, retangulo3.altura, retangulo3.calcular_
 print(type(retangulo1), retangulo1.base, retangulo2.altura, retangulo2.calcular_area())
 print(type(retangulo2), retangulo1.base, retangulo2.altura, retangulo2.calcular_area())
 
+retangulo1 = Retangulo(10.0, 5.0)
+retangulo2 = Retangulo(6.0, 3.0)
+
+retangulo3 = eval('Retangulo(7.5,12.3)')
+retangulo4 = eval(repr(retangulo3))
+
+print(retangulo1.__repr__())
+print(retangulo2)
+print(retangulo3)
+print(retangulo4)
+
 # ============= Pessoas =============
 
 pessoa1 = Pessoa('Maria da Silva', 'maria@email.com')
