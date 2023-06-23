@@ -3,6 +3,35 @@ class Retangulo:
         self.base = base
         self.altura = altura
 
+    @property
+    def base(self):
+        return self._base
+
+    @base.setter
+    def base(self, value):
+        if value <= 0.0:
+            raise ValueError('A base deve ser maior que zero')
+        self._base = value
+
+    @property
+    def altura(self):
+        return self._altura
+
+    @altura.setter
+    def altura(self, value):
+        if value <= 0.0:
+            raise ValueError('A altura deve ser maior que zero')
+        self._altura = value
+
+    @classmethod
+    def from_string(cls, rep_retangulo):
+        base, altura = rep_retangulo.split(',')
+        return cls(float(base), float(altura))    
+
+    @classmethod
+    def from_list(cls, lista):
+        return cls(lista[0], lista[1])
+
     def calcular_area(self):
         return self.base * self.altura
 

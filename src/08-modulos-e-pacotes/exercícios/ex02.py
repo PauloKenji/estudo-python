@@ -9,7 +9,13 @@ from pessoa.pessoa import Pessoa
 # ============= Retangulo =============
 
 retangulo1 = Retangulo(10.0, 5.0)
-retangulo2 = Retangulo(10.0, 5.0)
+retangulo1.base = 20.0
+retangulo1.altura = 10.0
+
+retangulo1 = Retangulo(10.0, 5.0)
+retangulo2 = Retangulo(6.0, 3.0)
+retangulo3 = Retangulo.from_list([10.0, 5.0])
+print(type(retangulo3), retangulo3.base, retangulo3.altura, retangulo3.calcular_area())
 
 print(type(retangulo1), retangulo1.base, retangulo2.altura, retangulo2.calcular_area())
 print(type(retangulo2), retangulo1.base, retangulo2.altura, retangulo2.calcular_area())
