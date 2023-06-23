@@ -5,6 +5,8 @@ from projeto.projeto import Projeto
 from participacoes.participacoes import Participacoes
 from retangulo.retangulo import Retangulo
 from pessoa.pessoa import Pessoa
+from endereco.endereco import Endereco
+from telefone.telefone import Telefone
 
 # ============= Retangulo =============
 
@@ -32,36 +34,23 @@ print(retangulo3)
 print(retangulo4)
 
 # ============= Pessoas =============
+telefone = Telefone('11', '1111-1111')
+pessoa1 = Pessoa('4132', 'joão', telefone, Endereco('02156185', 123))
 
-pessoa1 = Pessoa('Maria da Silva', 'maria@email.com')
-pessoa2 = Pessoa('João Santos', 'joao@email.com')
-pessoa3 = Pessoa('Pedro Santos','Pedro@email.com')
-#alterando o valor do atributo de classe na instancia
-# altera somente na instancia
-pessoa1.especie = 'Alienigena'
+pessoa1.add_endereco(Endereco('02123125', 456))
 
-#alterando o valor do atributo de classe na classe
-# altera em todas as instancias e na classe também
-Pessoa.especie = 'Alienigenas do Passado'
+pessoa2 = Pessoa('4512', 'Pedro', telefone, Endereco('02123663', 426))
 
-print(pessoa1.nome, pessoa1.email, pessoa1.especie)
-print(pessoa2.nome, pessoa2.email, pessoa2.especie)
-print(pessoa3.nome, pessoa3.email, pessoa3.especie)
+pessoa3 = Pessoa('4112', 'Maria', telefone, Endereco('11123663', 526))
 
-print(Pessoa.especie)
+print(pessoa1)
+print(pessoa1.nome)
+print(pessoa1.cpf)
+print(pessoa1.telefone.ddd, pessoa1.telefone.numero)
 
-pessoa1 = Pessoa('111', 'joão')
-pessoa2 = Pessoa('111', 'joão')
-pessoa3 = Pessoa('222', 'maria')
-
-pessoas = {pessoa1, pessoa2, pessoa3}
-print(pessoas)
-print(pessoa1 == pessoa2)
-
-pessoas_lista = [pessoa1, pessoa2, pessoa3]
-print(pessoas_lista)
-
-print(pessoas_lista.count(pessoa1))
+pessoa1.print_enderecos()
+pessoa2.print_enderecos()
+pessoa3.print_enderecos()
 
 # ============= Alunos, Projetos e Participações =============	
 
