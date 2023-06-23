@@ -7,7 +7,9 @@ from retangulo.retangulo import Retangulo
 from pessoa.pessoa import Pessoa
 from endereco.endereco import Endereco
 from telefone.telefone import Telefone
-
+from cliente.cliente import Cliente
+from funcionario.funcionario import Funcionario
+from programador.programador import Programador
 # ============= Retangulo =============
 
 retangulo1 = Retangulo(10.0, 5.0)
@@ -34,19 +36,19 @@ print(retangulo3)
 print(retangulo4)
 
 # ============= Pessoas =============
-telefone = Telefone('11', '1111-1111')
-pessoa1 = Pessoa('4132', 'joão', telefone, Endereco('02156185', 123))
+telefone1 = Telefone('11', '1111-1111')
+pessoa1 = Pessoa('4132', 'joão', telefone1, Endereco('02156185', 123))
 
 pessoa1.add_endereco(Endereco('02123125', 456))
 
-pessoa2 = Pessoa('4512', 'Pedro', telefone, Endereco('02123663', 426))
+pessoa2 = Pessoa('4512', 'Pedro', telefone1, Endereco('02123663', 426))
 
-pessoa3 = Pessoa('4112', 'Maria', telefone, Endereco('11123663', 526))
+pessoa3 = Pessoa('4112', 'Maria', telefone1, Endereco('11123663', 526))
 
 print(pessoa1)
 print(pessoa1.nome)
 print(pessoa1.cpf)
-print(pessoa1.telefone.ddd, pessoa1.telefone.numero)
+print(pessoa1.telefone, pessoa1.telefone.numero)
 
 pessoa1.print_enderecos()
 pessoa2.print_enderecos()
@@ -78,3 +80,18 @@ projeto1.add_participacao(participacao1)
 projeto2.add_participacao(participacao2)
 
 print(projeto1)
+
+#=========== Cliente, Funcionario e Programador ===========
+
+cliente = Cliente('NomeCliente', 'SobrenomeCliente', '123456789')
+cliente.salvar_compras('Item1', 'Item2', 'Item3')
+print(f'cliente: {cliente}')
+
+funcionario = Funcionario('NomeFuncionario', 'SobrenomeFuncionario', '987654321', 1000)
+print(f'funcionario: {funcionario}')
+print(f'funcionario.calcular_pagamento(): {funcionario.calcular_pagamento()}')
+
+
+programador = Programador('NomeProgramador', 'SobrenomeProgramador', '456789123', 2000, 500)
+print(f'programador: {programador}')
+print(f'programador.calcular_pagamento(): {programador.calcular_pagamento()}')
